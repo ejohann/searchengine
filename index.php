@@ -9,8 +9,10 @@
 			<img src="">
 		</div>
 		<div class="search-container">
-			<input type="text" name="term" class="search-box">
-			<input type="submit" value="Search" class="search-button">
+			<form action="search.php" method="GET">
+				<input type="text" name="term" class="search-box">
+				<input type="submit" value="Search" class="search-button">
+			</form>
 		</div>
 	</div>
 </body>
