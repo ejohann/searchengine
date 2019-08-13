@@ -1,7 +1,7 @@
 !<!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Search Engine</title>
 </head>
 <body>
 
