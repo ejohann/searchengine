@@ -1,8 +1,12 @@
 <?php
 
 	if(isset($_GET["term"])){
-		echo $_GET["term"];
-	}
+		$term = $_GET["term"];
+	  }
+	 else
+	  {
+	  	exit("you must enter a search term");
+	  }
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +31,14 @@
 					</form>
 				</div>
 			</div>
+			
+			<div class="tab-container">
+				<ul class="tab-list">
+					<li><a href='<?php echo "search.php?term=$term&type=site"; ?>'>Sites</a></li>
+					<li><a href='<?php echo "search.php?term=$term&type=image"; ?>'>Images</a></li>
+				</ul>
+			</div>
+
 		</div>	
 	</div>
 </body>
