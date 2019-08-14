@@ -8,7 +8,7 @@
 	<div class="wrapper index-page">
 		<div class="main-section">
 			<div class="logo-container">
-				<img src="">
+				<img src="assets/images/search_engine_logo.png">
 			</div>
 			<div class="search-container">
 				<form action="search.php" method="GET">
