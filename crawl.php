@@ -1,10 +1,14 @@
 <?php 
 	 include("classes/DomDocumentParser.php");
 
+	 $alreadyCrawled = array();
+	 $crawling = array();
+
 	 function createLink($src, $url){
 	 	$scheme = parse_url($url)["scheme"]; //http
 	 	$host = parse_url($url)["host"]; // www.sunsetcity.gd / link
 
+	 	// convert relative links to absolute links
 	 	if(substr($src, 0, 2) == "//"){
 	 		$src = $scheme . ":" . $src;
 	 	  }
@@ -22,11 +26,12 @@
 	 	  }
 
 	 	 return $src;
-	 	//echo "SRC: $src<br/>";
-	 	//echo "URL: $url<br/>";
 	   }
 
 	function followLinks($url){
+		global $alreadyCrawled;
+		global $crawling;
+
 		$parser = new DomDocumentParser($url);
 
 		$linkList = $parser->getLinks();
@@ -34,6 +39,7 @@
 		foreach ($linkList as $link) {
 			$href = $link->getAttribute("href");
 
+			 // links to be ignored
 			if(strpos($href, "#") !== false){
 				continue;
 			  }
@@ -42,8 +48,23 @@
 			 }
 
 			$href = createLink($href, $url); 
+
+			if(!in_array($href, $alreadyCrawled)){
+				$alreadyCrawled[] = $href;
+				$crawling[] = $href;
+
+				//insert $href
+			 }
+
 			echo $href . "<br/>";	
 		  }
+
+		  // remove item from array
+		 array_shift($crawling); 
+
+		 foreach($crawling as $site){
+		 	 followLinks($site);
+		   }
 	  }
 
 
