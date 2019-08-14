@@ -2,3 +2,9 @@
 	font-family: arial, sans-serif;
 	color: #545454;
 }
+
+html,
+body {
+	margin: 0;
+	height: 100%;
+}
