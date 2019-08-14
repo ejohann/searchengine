@@ -2,6 +2,8 @@
 
 	class DomDocumentParser {
 
+		private $document;
+
 		public function __construct($url){
 			$options = array(
 				'http' => array(
@@ -11,8 +13,8 @@
 			  );
 			$context = stream_context_create($options);
 			
-			$document = new DomDocument();
-			@$document->loadHTML(file_get_contents($url, false, $context));
+			$this->document = new DomDocument();
+			@$this->document->loadHTML(file_get_contents($url, false, $context));
 		  }
 
 	  }
