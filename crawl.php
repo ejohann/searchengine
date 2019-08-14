@@ -12,6 +12,9 @@
 			if(strpos($href, "#") !== false){
 				continue;
 			  }
+			else if(substr($href, 0, 12) == "javascript"){
+				continue;
+			 }
 
 			echo $href . "<br/>";	
 		  }
