@@ -29,9 +29,9 @@
 			</div>
 			
 			<div class="tab-container">
-				<ul class="tab-list">
-					<li><a href='<?php echo "search.php?term=$term&type=site"; ?>'>Sites</a></li>
-					<li><a href='<?php echo "search.php?term=$term&type=image"; ?>'>Images</a></li>
+				<ul class="tab-list ">
+					<li class="<?php echo $type == 'site' ? 'active' : ''; ?>"><a href='<?php echo "search.php?term=$term&type=site"; ?>'>Sites</a></li>
+					<li class="<?php echo $type == 'image' ? 'active' : ''; ?>"><a href='<?php echo "search.php?term=$term&type=image"; ?>'>Images</a></li>
 				</ul>
 			</div>
 
