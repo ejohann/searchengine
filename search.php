@@ -22,7 +22,7 @@
 					<form action="search.php" method="GET">
 						<div class="search-bar-container">
 							<input type="text" name="term" class="search-box">
-							<button><img src="assets/images/icons/search.png"></button>
+							<button class="search-button"><img src="assets/images/icons/search.png"></button>
 						</div>
 					</form>
 				</div>
