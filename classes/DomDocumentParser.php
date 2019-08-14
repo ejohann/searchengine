@@ -12,7 +12,7 @@
 			$context = stream_context_create($options);
 			
 			$document = new DomDocument();
-			$document->loadHTML(file_get_contents($url, false, $context));
+			@$document->loadHTML(file_get_contents($url, false, $context));
 		  }
 
 	  }
