@@ -72,3 +72,27 @@ body {
 .logo-container img{
 	width: 100%;
 }
+
+.header{
+	background-color: #fafafa;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.header-content .logo-container{
+	width: 150px;
+	padding: 5px 20px;
+	box-sizing: border-box;
+}
+
+.wrapper .header-content{
+	display: flex;
+	align-items: center;
+}
+
+.header-content .search-container{
+	flex: 1;
+}
+
+.header-content .search-container form{
+	margin: 15px 0 28px 0;
+}
