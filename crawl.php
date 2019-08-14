@@ -12,6 +12,7 @@
 	 		$src = $scheme . "://" . $src;
 	 	  }
 
+	 	 return $src;
 	 	//echo "SRC: $src<br/>";
 	 	//echo "URL: $url<br/>";
 	   }
@@ -31,7 +32,7 @@
 				continue;
 			 }
 
-			createLink($href, $url); 
+			$href = createLink($href, $url); 
 			echo $href . "<br/>";	
 		  }
 	  }
