@@ -1,7 +1,10 @@
 <?php 
+	 include("classes/DomDocumentParser.php");
+
 	function followLinks($url){
-		echo $url;
-	}
+		$parser = new DomDocumentParser($url);
+	  }
+
 
 	$startUrl = "https://www.sunsetcity.gd";
 
