@@ -18,6 +18,14 @@
 				<div class="logo-container">
 					<a href="./index.php"><img src="assets/images/search_engine_logo.png"></a>
 				</div>
+				<div class="search-container">
+					<form action="search.php" method="GET">
+						<div class="search-bar-container">
+							<input type="text" name="term" class="search-box">
+							<button>Search</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>	
 	</div>
