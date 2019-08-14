@@ -130,3 +130,37 @@ body {
 .header-content .search-bar-container .search-button img{
 	width: 22px;
 }
+
+.tab-container{
+	margin-left: 150px;
+}
+
+.tab-container .tab-list{
+	padding: 0;
+	margin: 0;
+}
+
+
+.tab-container .tab-list li{
+	display: inline-block;
+	padding: 0 16px 12px, 16px;
+	color: #777;
+	font-size: 13px;
+}
+.tab-container .tab-list li a{
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
