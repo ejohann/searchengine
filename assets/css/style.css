@@ -29,3 +29,12 @@ body {
 	margin-top: 20px;
 	width: 100%;
 }
+
+.main-section .search-container form{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
