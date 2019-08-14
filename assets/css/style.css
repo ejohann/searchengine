@@ -24,3 +24,8 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
+
+.main-section .search-container{
+	margin-top: 20px;
+	width: 100%;
+}
