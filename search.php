@@ -16,7 +16,7 @@
 		<div class="header">
 			<div class="header-content">
 				<div class="logo-container">
-					<img src="assets/images/search_engine_logo.png">
+					<a href="./index.php"><img src="assets/images/search_engine_logo.png"></a>
 				</div>
 			</div>
 		</div>	
