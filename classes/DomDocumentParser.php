@@ -17,6 +17,10 @@
 			@$this->document->loadHTML(file_get_contents($url, false, $context));
 		  }
 
+		public function getLinks(){
+			return $this->document->getElementsByTagName("a");
+		  }  
+
 	  }
 
 
