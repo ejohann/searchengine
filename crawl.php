@@ -8,6 +8,11 @@
 
 		foreach ($linkList as $link) {
 			$href = $link->getAttribute("href");
+
+			if(strpos($href, "#") !== false){
+				continue;
+			  }
+
 			echo $href . "<br/>";	
 		  }
 	  }
