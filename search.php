@@ -1,12 +1,8 @@
 <?php
 
-	if(isset($_GET["term"])){
-		$term = $_GET["term"];
-	  }
-	 else
-	  {
-	  	exit("you must enter a search term");
-	  }
+	$term = (isset($_GET["term"])) ? $_GET["term"] : exit("you must enter a search term");
+
+	$type = (isset($_GET["type"])) ? $_GET["type"] : "site";  
 ?>
 
 <!DOCTYPE html>
