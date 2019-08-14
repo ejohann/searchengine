@@ -50,7 +50,6 @@ body {
 	outline: none;
 }
 
-
 .main-section .search-container .search-box{
 	border: none;
 	box-shadow: 0 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
@@ -63,4 +62,13 @@ body {
 	width: 100%;
 	max-width: 630px;
 	color: #000;
+}
+
+.main-section .logo-container{
+	width: 220px;
+	text-align: center;
+}
+
+.logo-container img{
+	width: 100%;
 }
