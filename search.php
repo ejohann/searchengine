@@ -42,7 +42,9 @@
 		<div class="main-result-section">
 			<?php 
 				$resultsProvider = new SiteResultsProvider($connection);
-				echo $resultsProvider->getNumResults($term);
+				$totalResults = $resultsProvider->getNumResults($term);
+			
+				echo "<p class='results-count'>$totalResults results found.</p>";
 			?>
 		</div>	
 
