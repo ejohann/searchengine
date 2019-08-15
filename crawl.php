@@ -21,6 +21,23 @@
 		return $insert_query->rowCount() != 0;
 	  }
 
+
+	function insertImage($url, $src, $alt, $image_title){
+		global $connection;
+
+		$insert_image_query = $connection->prepare("INSERT INTO sites(site_url, image_url, alt, title) 
+			VALUES(:site_url, :image_url, :alt, :title) ");
+
+		$insert_image_query->bindParam(":site_url", $url);
+		$insert_image_query->bindParam(":image_url", $src);
+		$insert_image_query->bindParam(":alt", $alt);
+		$insert_image_query->bindParam(":title", $image_title);
+		$insert_image_query->execute();
+
+		return $insert_image_query->rowCount() != 0;
+	  }
+
+
 	 function linkExists($url){
 		global $connection;
 
