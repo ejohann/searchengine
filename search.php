@@ -45,6 +45,8 @@
 				$totalResults = $resultsProvider->getNumResults($term);
 			
 				echo "<p class='results-count'>$totalResults results found.</p>";
+
+				echo $resultsProvider->getResultsHtml(1, 20, $term);
 			?>
 		</div>	
 
