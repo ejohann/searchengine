@@ -21,6 +21,10 @@
 			return $this->document->getElementsByTagName("a");
 		  }  
 
+		public function getTitleTags(){
+			return $this->document->getElementsByTagName("title");
+		  } 
+
 	  }
 
 
