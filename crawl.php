@@ -19,6 +19,16 @@
 		return $query->execute();
 	  }
 
+	 function linkExists($url){
+		global $connection;
+
+		$select_query = $connection->prepare("SELECT * FROM sites WHERE url = :url");
+
+		$select_query->bindParam(":url", $url);
+
+		return $select_query->execute();
+	  }
+
 	function createLink($src, $url){
 	 	$scheme = parse_url($url)["scheme"]; //http
 	 	$host = parse_url($url)["host"]; // www.sunsetcity.gd / link
