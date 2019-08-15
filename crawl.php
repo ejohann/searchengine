@@ -15,8 +15,9 @@
 		$insert_query->bindParam(":title", $title);
 		$insert_query->bindParam(":description", $description);
 		$insert_query->bindParam(":keywords", $keywords);
+		$insert_query->execute();
 
-		return $insert_query->execute();
+		return $insert_query->rowCount() != 0;
 	  }
 
 	 function linkExists($url){
