@@ -25,7 +25,7 @@
 	function insertImage($url, $src, $alt, $image_title){
 		global $connection;
 
-		$insert_image_query = $connection->prepare("INSERT INTO sites(site_url, image_url, alt, title) 
+		$insert_image_query = $connection->prepare("INSERT INTO images(site_url, image_url, alt, title) 
 			VALUES(:site_url, :image_url, :alt, :title) ");
 
 		$insert_image_query->bindParam(":site_url", $url);
@@ -138,6 +138,9 @@
 	 	 			$alreadyFoundImages[] = $src;
 
 	 	 			//insert images
+	 	 			if(insertImage($url, $src, $alt, $image_title)){
+	 	 				echo "SUCCESS: $src";
+	 	 			  }
 	 	 		  }
 
 	 	   }
