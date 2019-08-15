@@ -201,7 +201,7 @@
 	  }
 
 
-	$startUrl = "https://www.sunsetcity.gd";
+	$startUrl = "https://spicemasgrenada.com";
 
 	followLinks($startUrl);
 ?>
