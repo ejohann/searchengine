@@ -88,8 +88,19 @@
 	 	$description = str_replace("\n", "", $description); // replace newline
 	 	$keywords = str_replace("\n", "", $keywords); // replace newline
 
-	 	// insert into db
-	 	insertLink($url, $title, $description, $keywords);
+	 	// check if link already exists in db
+	 	if(linkExists($url)){
+	 		echo "$url already exists<br/>";
+	 	   }
+	 	  // insert into db
+	 	 else if(insertLink($url, $title, $description, $keywords)){
+	 	 	 echo "SUCCESS:  $url<br/>";
+	 	   }
+	 	 else{
+	 	 	echo "ERROR: Failed to insert $url<br/>";
+	 	   }
+	 	
+	 	
 
 	 	// echo "URL: $url, Title: $title, Description: $description, Keywords: $keywords<br>";
 	      
