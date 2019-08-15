@@ -22,7 +22,7 @@
 		  }  
 
 		public function getResultsHtml($page, $pageSize, $term){
-				$query = $this->connection->prepare("SELECT count(*) as total 
+				$query = $this->connection->prepare("SELECT * 
 					FROM sites WHERE title LIKE :term 
 					OR url LIKE :term 
 					OR keywords LIKE :term 
@@ -36,7 +36,7 @@
 			$resultsHtml = "<div class='siteResults'>";
 
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
-				$title = $row['title'];
+				$title = $row["title"];
 				echo "$title<br/>";
 			  }
 
