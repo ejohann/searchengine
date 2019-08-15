@@ -40,7 +40,10 @@
 		</div>
 
 		<div class="main-result-section">
-			
+			<?php 
+				$resultsProvider = new SiteResultsProvider($connection);
+				echo $resultsProvider->getNumResults($term);
+			?>
 		</div>	
 
 	</div>
