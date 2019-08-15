@@ -76,6 +76,7 @@
 
 
 	 function getDetails($url){
+	 	global $alreadyFoundImages;
 	 	$parser = new DomDocumentParser($url);
 	 	$titleArray = $parser->getTitleTags();
 	 	if(sizeof($titleArray) == 0 || $titleArray->item(0) == NULL){
