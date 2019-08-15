@@ -1,10 +1,11 @@
 <?php 
-	 include("classes/DomDocumentParser.php");
+	include("config.php");
+	include("classes/DomDocumentParser.php");
 
-	 $alreadyCrawled = array();
-	 $crawling = array();
+	$alreadyCrawled = array();
+	$crawling = array();
 
-	 function createLink($src, $url){
+	function createLink($src, $url){
 	 	$scheme = parse_url($url)["scheme"]; //http
 	 	$host = parse_url($url)["host"]; // www.sunsetcity.gd / link
 
