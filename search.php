@@ -35,7 +35,12 @@
 				</ul>
 			</div>
 
+		</div>
+
+		<div class="main-result-section">
+			
 		</div>	
+
 	</div>
 </body>
 </html>
