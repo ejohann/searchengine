@@ -25,6 +25,10 @@
 			return $this->document->getElementsByTagName("title");
 		  } 
 
+		public function getMetaTags(){
+			return $this->document->getElementsByTagName("meta");
+		  } 
+
 	  }
 
 
