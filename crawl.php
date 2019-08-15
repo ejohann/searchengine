@@ -4,6 +4,7 @@
 
 	$alreadyCrawled = array();
 	$crawling = array();
+	$alreadyFoundImages = array();
 
 	function insertLink($url, $title, $description, $keywords){
 		global $connection;
@@ -102,7 +103,27 @@
 	 	 	echo "ERROR: Failed to insert $url<br/>";
 	 	   }
 	 	
-	 	
+	 	// images
+	 	 $imageArray = $parser->getImages();  
+	 	 foreach($imageArray as $image){
+	 	 		$src = $image->getAttribute("src");
+	 	 		$alt = $image->getAttribute("alt");
+	 	 		$image_title = $image->getAttribute("title");
+
+	 	 		// if image doesn't have title or alt - continue
+	 	 		if(!$title && !$alt){
+	 	 			continue;
+	 	 		  }
+
+	 	 		$src = createLink($src, $url);
+
+	 	 		if(!in_array($src, $alreadyFoundImages)){
+	 	 			$alreadyFoundImages[] = $src;
+
+	 	 			//insert images
+	 	 		  }
+
+	 	   }
 
 	 	// echo "URL: $url, Title: $title, Description: $description, Keywords: $keywords<br>";
 	      
