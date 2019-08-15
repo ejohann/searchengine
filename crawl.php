@@ -140,7 +140,7 @@
 
 	 	 			//insert images
 	 	 			if(insertImage($url, $src, $alt, $image_title)){
-	 	 				echo "SUCCESS: $src";
+	 	 				echo "SUCCESS: $src<br/>";
 	 	 			  }
 	 	 		  }
 
