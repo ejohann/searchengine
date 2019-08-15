@@ -52,6 +52,11 @@
 			return $resultsHtml;
 		  }
 
+		private function trimField($string, $characterLimit){
+			$dots = strlen($string) > $characterLimit ? "..." : "";
+			return substr($string, 0, $characterLimit) . $dots;
+		}  
+
 	  }
 
 ?>
