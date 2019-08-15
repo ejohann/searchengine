@@ -5,6 +5,20 @@
 	$alreadyCrawled = array();
 	$crawling = array();
 
+	function insertLink($url, $title, $description, $keywords){
+		global $connection;
+
+		$insert_query = $connection->prepare("INSERT INTO sites(url, title, description, keywords) 
+			VALUES(:url, :title, :description, :keywords) ");
+
+		$insert_query->bindParam(":url", $url);
+		$insert_query->bindParam(":title", $title);
+		$insert_query->bindParam(":description", $description);
+		$insert_query->bindParam(":keywords", $keywords);
+
+		return $query->execute();
+	  }
+
 	function createLink($src, $url){
 	 	$scheme = parse_url($url)["scheme"]; //http
 	 	$host = parse_url($url)["host"]; // www.sunsetcity.gd / link
