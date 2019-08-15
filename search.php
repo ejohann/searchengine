@@ -1,5 +1,5 @@
 <?php
-
+	include("config.php");
 	$term = (isset($_GET["term"])) ? $_GET["term"] : exit("you must enter a search term");
 
 	$type = (isset($_GET["type"])) ? $_GET["type"] : "site";  
