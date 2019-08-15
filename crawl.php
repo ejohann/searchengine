@@ -77,7 +77,10 @@
 	 	$description = str_replace("\n", "", $description); // replace newline
 	 	$keywords = str_replace("\n", "", $keywords); // replace newline
 
-	 	echo "URL: $url, Title: $title, Description: $description, Keywords: $keywords<br>";
+	 	// insert into db
+	 	insertLink($url, $title, $description, $keywords);
+
+	 	// echo "URL: $url, Title: $title, Description: $description, Keywords: $keywords<br>";
 	      
 	 }
 
