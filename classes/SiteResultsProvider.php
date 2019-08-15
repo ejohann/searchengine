@@ -14,8 +14,11 @@
 					OR url LIKE :term 
 					OR keywords LIKE :term 
 					or description LIKE :term");
-			$query->bindParam(":term", $term);
+			$searchTerm = "%" .$term. "%";
+			$query->bindParam(":term", $searchTerm);
 			$query->execute();
+			$row = $query->fetch(PDO::FETCH_ASSOC);
+			return $row["total"];
 		  }   
 	  }
 
