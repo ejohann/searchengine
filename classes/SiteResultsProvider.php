@@ -40,6 +40,11 @@
 				$url = $row["url"];
 				$title = $row["title"];
 				$description = $row["description"];
+				
+				// trim lengths
+				$title = $this->trimField($title, 55);
+				$description= $this->trimField($description, 230);
+
 				$resultsHtml .= "<div class='result-container'>
 									<h3 class='title'><a class='result' href='$url'>$title</a></h3>
 									<span class='url'>$url</span>
