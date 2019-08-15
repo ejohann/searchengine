@@ -27,7 +27,9 @@
 
 		$select_query->bindParam(":url", $url);
 
-		return $select_query->execute();
+		$select_query->execute();
+
+		return $select_query->rowCount() != 0;
 	  }
 
 	function createLink($src, $url){
