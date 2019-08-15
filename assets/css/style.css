@@ -161,6 +161,16 @@ body {
 }
 
 
+.main-result-section{
+	flex: 1;
+}
+
+.main-results-section .results-count{
+	font-size: 13px;
+	color: #808080;
+	margin-left: 150px;
+}
+
 
 
 
