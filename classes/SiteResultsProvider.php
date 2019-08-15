@@ -36,8 +36,15 @@
 			$resultsHtml = "<div class='siteResults'>";
 
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
+				$id = $row["id"];
+				$url = $row["url"];
 				$title = $row["title"];
-				$resultsHtml .= "$title<br/>";
+				$description = $row["description"];
+				$resultsHtml .= "<div class='result-container'>
+									<h3 class='title'><a class='result' href='$url'>$title</a></h3>
+									<span class='url'>$url</span>
+									<span class='description'>$description</span>
+								</div>";
 			  }
 
 			$resultsHtml .= "</div>";
