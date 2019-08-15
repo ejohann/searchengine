@@ -29,6 +29,11 @@
 			return $this->document->getElementsByTagName("meta");
 		  } 
 
+		 public function getImages(){
+			return $this->document->getElementsByTagName("img");
+		  } 
+
+
 	  }
 
 
