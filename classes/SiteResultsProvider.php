@@ -37,10 +37,12 @@
 
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
 				$title = $row["title"];
-				echo "$title<br/>";
+				$resultsHtml .= "$title<br/>";
 			  }
 
 			$resultsHtml .= "</div>";
+
+			return $resultsHtml;
 		  }
 
 	  }
