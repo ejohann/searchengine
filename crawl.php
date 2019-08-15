@@ -28,6 +28,26 @@
 	 	 return $src;
 	   }
 
+
+	 function getDetails($url){
+	 	$parser = new DomDocumentParser($url);
+	 	$titleArray = $parser->getTitleTags();
+	 	if(sizeof($titleArray) == 0 || $titleArray->item(0) == NULL){
+	 		return;
+	 	 }
+	 	
+	 	$title = $titleArray->item(0)->nodeValue; // get first item in array
+	 	$title = str_replace("\n", "", $title); // replace newline
+
+	 	if($title == ""){
+	 			return;
+	 	  }
+	 	echo "URL: $url, Title: $title<br>";
+	      
+	 }
+
+
+
 	function followLinks($url){
 		global $alreadyCrawled;
 		global $crawling;
@@ -40,7 +60,10 @@
 			$href = $link->getAttribute("href");
 
 			 // links to be ignored
-			if(strpos($href, "#") !== false){
+			if(!$href){
+				continue;
+			  }
+			else if(strpos($href, "#") !== false){
 				continue;
 			  }
 			else if(substr($href, 0, 12) == "javascript"){
@@ -54,9 +77,15 @@
 				$crawling[] = $href;
 
 				//insert $href
+				 
+				getDetails($href);
+				 
+				
 			 }
 
-			echo $href . "<br/>";	
+			//echo $href . "<br/>";
+
+
 		  }
 
 		  // remove item from array
