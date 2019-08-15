@@ -16,7 +16,7 @@
 		$insert_query->bindParam(":description", $description);
 		$insert_query->bindParam(":keywords", $keywords);
 
-		return $query->execute();
+		return $insert_query->execute();
 	  }
 
 	 function linkExists($url){
