@@ -172,9 +172,36 @@ body {
 }
 
 
+.main-results-section .site-results{
+	margin-left: 150px;
+}
 
+.result-container{
+	display:flex;
+	flex-direction: column;
+	margin-bottom: 26px;
+}
 
+.result-container .title{
+	margin: 0;
+}
 
+.result-container .title a{
+	color: #1a02ab;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: normal;
+}
 
+.result-container .title a:hover{
+	text-decoration: underline;
+}
 
+.result-container .url {
+	font: #006621;
+	font-size: 14px;
+}
 
+.result-container .description{
+	font-size: 12px;
+}
