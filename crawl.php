@@ -200,8 +200,14 @@
 		   }
 	  }
 
-
-	$startUrl = "https://spicemasgrenada.com";
-
-	followLinks($startUrl);
+	if(isset($_POST['url'])){
+		$startUrl  = $_POST['url'];
+		followLinks($startUrl);
+  	  }
+	else {
+		echo "<form method='POST'>
+			<input type='text' placeholder='Enter a url' name='url'>
+			<input type='submit' value='Crawl'>
+		</form>";
+	  }
 ?>
