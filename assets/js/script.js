@@ -13,5 +13,5 @@ $(document).ready(function(){
 });
 
 function increaseLinkClicks(linkID, url){
-
+	$.post("ajax/updateLinkCount.php", {linkID: linkID});
 }
