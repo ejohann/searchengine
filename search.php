@@ -66,7 +66,7 @@
 					while($pagesLeft != 0){
 						if($currentPage == $page){
 							echo "<div class='page-number-container'> 
-									<img src='assets/images/page.png'>
+									<img src='assets/images/pageSelected.png'>
 									<span class='page-number'>$currentPage</span>
 								</div>";
 						  }
