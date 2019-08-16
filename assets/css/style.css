@@ -215,3 +215,7 @@ body {
 .page-buttons{
 	display: flex;
 }
+
+.page-number-container img{
+	height: 37px;
+}
