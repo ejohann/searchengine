@@ -26,6 +26,7 @@
 				<div class="search-container">
 					<form action="search.php" method="GET">
 						<div class="search-bar-container">
+							<input type="hidden" name="type" value="<?php echo $type; ?>">
 							<input type="text" name="term" class="search-box" value="<?php echo $term; ?>">
 							<button class="search-button"><img src="assets/images/icons/search.png"></button>
 						</div>
