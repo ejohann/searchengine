@@ -64,10 +64,21 @@
 					$currentPage = 1;
 					$pagesLeft = 10;
 					while($pagesLeft != 0){
-						echo "<div class='page-number-container'> 
-								<img src='assets/images/page.png'>
-								<span class='page-number'>$currentPage</span>
-							</div>";
+						if($currentPage == $page){
+							echo "<div class='page-number-container'> 
+									<img src='assets/images/page.png'>
+									<span class='page-number'>$currentPage</span>
+								</div>";
+						  }
+						else{
+							echo "<div class='page-number-container'> 
+									<a href='search.php?term=$term&type=$type&page=$currentPage'>
+										<img src='assets/images/page.png'>
+										<span class='page-number'>$currentPage</span>
+									</a>
+								</div>";
+						  }
+						
 						$currentPage++;
 						$pagesLeft--;
 					  }
