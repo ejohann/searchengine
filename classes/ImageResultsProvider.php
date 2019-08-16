@@ -62,7 +62,7 @@
 				  }
 
 				$resultsHtml .= "<div class='grid-item image$count'>
-									<a href='$image_url' data-fancybox data-caption='$displayText'>
+									<a href='$image_url' data-fancybox data-caption='$displayText' data-site_url='$site_url'>
 										
 										<script>
 											$(document).ready(function(){
