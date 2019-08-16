@@ -3,7 +3,11 @@ $(document).ready(function(){
 		var url = $(this).attr("href");
 		var id = $(this).attr("data-linkID");
 
-		console.log("URL: " + url + " ID: " + id);
+		if(!id){ 
+			// do something here
+		  }
+
+		increaseLinkClicks(id, url);
 		return false;
 	});
 });
