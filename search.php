@@ -53,6 +53,18 @@
 			?>
 		</div>	
 
+		<div class="pagination-container">
+			<div class="page-buttons">
+				<img src="assets/images/pageStart.png">				
+			</div>
+
+			<div class="page-buttons">
+				<img src="assets/images/pageEnd.png">				
+			</div>
+
+					
+		</div>
+
 	</div>
 </body>
 </html>
