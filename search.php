@@ -47,13 +47,13 @@
 		<div class="main-result-section">
 			<?php 
 				
-				if($type == "sites"){
+				if($type == "site"){
 					$resultsProvider = new SiteResultsProvider($connection);
 					$pageItems = 20;
 			  	 }
 				else{
 					$resultsProvider = new ImageResultsProvider($connection);
-					$pageItems = 20;
+					$pageItems = 30;
 			  	 }	
 
 				$totalResults = $resultsProvider->getNumResults($term);
