@@ -40,7 +40,7 @@
 			$query->bindParam(":pageSize", $pageSize, PDO::PARAM_INT);
 			$query->execute();
 
-			$resultsHtml = "<div class='siteResults'>";
+			$resultsHtml = "<div class='site-results'>";
 
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
 				$id = $row["id"];
