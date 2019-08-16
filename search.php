@@ -45,11 +45,11 @@
 			<?php 
 				$resultsProvider = new SiteResultsProvider($connection);
 				$totalResults = $resultsProvider->getNumResults($term);
-				$pageLimit = 20;
+				$pageItems = 20;
 			
 				echo "<p class='results-count'>$totalResults results found.</p>";
 
-				echo $resultsProvider->getResultsHtml($page, $pageLimit, $term);
+				echo $resultsProvider->getResultsHtml($page, $pageItems, $term);
 			?>
 		</div>	
 
@@ -60,7 +60,9 @@
 					<img src="assets/images/pageStart.png">				
 				</div>
 
-				<?php 
+				<?php
+					$pagesToShow = 10;
+					$numPages = ceil($totalResults / $pageItems);
 					$currentPage = 1;
 					$pagesLeft = 10;
 					while($pagesLeft != 0){
