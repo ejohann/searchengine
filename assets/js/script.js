@@ -25,6 +25,9 @@ $(document).ready(function(){
 		transitionDuration: 0,
 		isInitLayout: false	
 	});
+
+	$("[data-fancybox]").fancybox();
+
 });
 
 function loadImage(src, className){
