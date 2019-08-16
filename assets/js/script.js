@@ -14,6 +14,10 @@ $(document).ready(function(){
 	});
 
 	var grid = $(".image-results");
+	grid.on("layoutComplete", function(){
+		$(".grid-item img").css("visibility", "visible");
+			});
+
 	grid.masonry({
 		itemSelector: ".grid-item",
 		columnWidth: 200,
