@@ -1,6 +1,13 @@
 $(document).ready(function(){
 	$(".result").on("click", function(){
-		console.log("I was clicked");
+		var url = $(this).attr("href");
+		var id = $(this).attr("data-linkID");
+
+		console.log("URL: " + url + " ID: " + id);
 		return false;
 	});
 });
+
+function increaseLinkClicks(linkID, url){
+
+}
