@@ -64,7 +64,7 @@
 					$pagesToShow = 10;
 					$numPages = ceil($totalResults / $pageItems);
 					$currentPage = 1;
-					$pagesLeft = 10;
+					$pagesLeft = min($pagesToShow, $numPages);
 					while($pagesLeft != 0){
 						if($currentPage == $page){
 							echo "<div class='page-number-container'> 
