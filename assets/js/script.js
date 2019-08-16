@@ -13,5 +13,13 @@ $(document).ready(function(){
 });
 
 function increaseLinkClicks(linkID, url){
-	$.post("ajax/updateLinkCount.php", {linkID: linkID});
+	$.post("ajax/updateLinkCount.php", {linkID: linkID})
+	 	.done(function(result){
+	 		if(result != ""){
+	 			// do something here
+	 			return;
+	 		  }
+
+	 		window.location.href = url;
+	 	});
 }
