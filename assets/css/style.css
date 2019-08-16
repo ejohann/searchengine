@@ -211,3 +211,7 @@ body {
 	justify-content: center;
 	margin-bottom: 25px;
 }
+
+.page-buttons{
+	display: flex;
+}
