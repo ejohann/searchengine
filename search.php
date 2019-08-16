@@ -43,10 +43,11 @@
 			<?php 
 				$resultsProvider = new SiteResultsProvider($connection);
 				$totalResults = $resultsProvider->getNumResults($term);
+				$pageLimit = 20;
 			
 				echo "<p class='results-count'>$totalResults results found.</p>";
 
-				echo $resultsProvider->getResultsHtml(1, 20, $term);
+				echo $resultsProvider->getResultsHtml(2, $pageLimit, $term);
 			?>
 		</div>	
 
