@@ -13,6 +13,7 @@
 <html>
 <head>
 	<title>Search Engine</title>
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
