@@ -61,7 +61,13 @@
 
 				$resultsHtml .= "<div class='grid-item'>
 									<a class='result' href='$image_url' data-linkID='$id'>
-										<img src='$image_url'>
+										
+										<script>
+											$(document).ready(function(){
+													loadImage(\"$image_url\");
+												});
+										</script>
+										
 										<span class='details'>$displayText</span>
 									</a>
 								</div>";
