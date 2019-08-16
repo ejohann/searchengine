@@ -39,6 +39,9 @@ function loadImage(src, className){
 
 	image.on("error", function(){
 		//broken image
+		$("." + className).remove();
+		$.post("ajax/setBroken.php", {src: src});
+
 	});
 
 	image.attr("src", src);
