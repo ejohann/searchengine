@@ -109,7 +109,7 @@ body {
 }
 
 .header-content .search-bar-container .search-box{
-	flex:;
+	flex: 1;
 	border: 0;
 	background-color: transparent;
 	padding: 32px;
