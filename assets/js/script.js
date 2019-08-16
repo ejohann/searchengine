@@ -24,7 +24,7 @@ $(document).ready(function(){
 function loadImage(src, className){
 	var image = $("<img>");
 	image.on("load", function(){
-
+		$("." + className + " a").append(image);
 	});
 
 	image.on("error", function(){
