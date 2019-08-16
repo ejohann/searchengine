@@ -21,6 +21,19 @@ $(document).ready(function(){
 	});
 });
 
+function loadImage(src){
+	var image = $("<img>");
+	image.on("load", function(){
+
+	});
+
+	image.on("error", function(){
+		//broken image
+	});
+
+	image.attr("src", src);
+}
+
 function increaseLinkClicks(linkID, url){
 	$.post("ajax/updateLinkCount.php", {linkID: linkID})
 	 	.done(function(result){
