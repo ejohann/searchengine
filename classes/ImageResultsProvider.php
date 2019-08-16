@@ -42,7 +42,9 @@
 
 			$resultsHtml = "<div class='image-results'>";
 
+			$count = 0;
 			while($row = $query->fetch(PDO::FETCH_ASSOC)){
+				$count++;
 				$id = $row["id"];
 				$image_url = $row["image_url"];
 				$site_url = $row["site_url"];
@@ -59,12 +61,12 @@
 					$displayText = $image_url;
 				  }
 
-				$resultsHtml .= "<div class='grid-item'>
+				$resultsHtml .= "<div class='grid-item image$count'>
 									<a class='result' href='$image_url' data-linkID='$id'>
 										
 										<script>
 											$(document).ready(function(){
-													loadImage(\"$image_url\");
+													loadImage(\"$image_url\", \"image$count\");
 												});
 										</script>
 										
