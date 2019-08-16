@@ -60,6 +60,20 @@
 					<img src="assets/images/pageStart.png">				
 				</div>
 
+				<?php 
+					$currentPage = 1;
+					$pagesLeft = 10;
+					while($pagesLeft != 0){
+						echo "<div class='page-number-container'> 
+								<img src='assets/images/page.png'>
+								<span class='page-number'>$currentPage</span>
+							</div>";
+						$currentPage++;
+						$pagesLeft--;
+					  }
+
+				?>
+
 				<div class="page-number-container">
 					<img src="assets/images/pageEnd.png">				
 				</div>
