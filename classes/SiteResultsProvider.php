@@ -32,12 +32,12 @@
 					OR keywords LIKE :term 
 					or description LIKE :term 
 					ORDER BY clicks DESC 
-					LIMIT :fromLimit, :pageSize
-					");
+					LIMIT :fromLimit, :pageSize");
+
 			$searchTerm = "%" .$term. "%";
 			$query->bindParam(":term", $searchTerm);
-			$query->bindParam(":fromLimit", $fromLimit);
-			$query->bindParam(":pageSize", $pageSize);
+			$query->bindParam(":fromLimit", $fromLimit, PDO::PARAM_INT);
+			$query->bindParam(":pageSize", $pageSize, PDO::PARAM_INT);
 			$query->execute();
 
 			$resultsHtml = "<div class='siteResults'>";
