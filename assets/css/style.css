@@ -232,3 +232,7 @@ body {
 	color: #000;
 	font-size: 13px;
 }
+
+a .page-number{
+	color: #4285f4;
+}
