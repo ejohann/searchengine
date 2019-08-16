@@ -165,14 +165,14 @@ body {
 	flex: 1;
 }
 
-.main-results-section .results-count{
+.main-result-section .results-count{
 	font-size: 13px;
 	color: #808080;
 	margin-left: 150px;
 }
 
 
-.main-results-section .site-results{
+.main-result-section .site-results{
 	margin-left: 150px;
 }
 
