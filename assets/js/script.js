@@ -10,6 +10,15 @@ $(document).ready(function(){
 		increaseLinkClicks(id, url);
 		return false;
 	});
+
+	var grid = $(".image-results");
+	grid.masonry({
+		itemSelector: ".grid-item",
+		columnWidth: 200,
+		gutter: 5,
+		transitionDuration: 0,
+		isInitLayout: false	
+	});
 });
 
 function increaseLinkClicks(linkID, url){
