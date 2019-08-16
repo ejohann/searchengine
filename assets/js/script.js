@@ -1,3 +1,5 @@
+var timer;
+
 $(document).ready(function(){
 	$(".result").on("click", function(){
 		var url = $(this).attr("href");
@@ -25,6 +27,10 @@ function loadImage(src, className){
 	var image = $("<img>");
 	image.on("load", function(){
 		$("." + className + " a").append(image);
+		clearTimeout(timer);
+		timer = setTimeout(function(){
+			$(".image-results").masonry();
+		}, 500);
 	});
 
 	image.on("error", function(){
