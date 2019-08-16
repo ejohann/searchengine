@@ -220,7 +220,8 @@ body {
 	height: 37px;
 }
 
-.page-number-container{
+.page-number-container, 
+.page-number-container a{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
