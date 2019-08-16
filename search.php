@@ -55,14 +55,16 @@
 
 		<div class="pagination-container">
 			<div class="page-buttons">
-				<img src="assets/images/pageStart.png">				
-			</div>
 
-			<div class="page-buttons">
-				<img src="assets/images/pageEnd.png">				
-			</div>
+				<div class="page-number-container">
+					<img src="assets/images/pageStart.png">				
+				</div>
 
-					
+				<div class="page-number-container">
+					<img src="assets/images/pageEnd.png">				
+				</div>
+
+			</div>
 		</div>
 
 	</div>
