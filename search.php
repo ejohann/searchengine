@@ -5,6 +5,8 @@
 	$term = (isset($_GET["term"])) ? $_GET["term"] : exit("you must enter a search term");
 
 	$type = (isset($_GET["type"])) ? $_GET["type"] : "site";  
+
+	$page = (isset($_GET["page"])) ? $_GET["page"] : 1; 
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +49,7 @@
 			
 				echo "<p class='results-count'>$totalResults results found.</p>";
 
-				echo $resultsProvider->getResultsHtml(2, $pageLimit, $term);
+				echo $resultsProvider->getResultsHtml($page, $pageLimit, $term);
 			?>
 		</div>	
 
