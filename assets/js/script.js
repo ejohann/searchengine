@@ -26,7 +26,18 @@ $(document).ready(function(){
 		isInitLayout: false	
 	});
 
-	$("[data-fancybox]").fancybox();
+	$("[data-fancybox]").fancybox({
+		caption : function( instance, item ) {
+        var caption = $(this).data('caption') || '';
+        var site_url= $(this).data('site_url') || '';
+        if ( item.type === 'image' ) {
+            caption = (caption.length ? caption + '<br />' : '') 
+            + '<a href="' + item.src + '">View image</a><br/><a href="' + site_url + '">Visit page</a>' ;
+        }
+
+        return caption;
+    }
+	});
 
 });
 
