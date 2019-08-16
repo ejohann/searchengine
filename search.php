@@ -1,6 +1,7 @@
 <?php
 	include("config.php");
 	include("classes/SiteResultsProvider.php");
+	include("classes/ImageResultsProvider.php");
 
 	$term = (isset($_GET["term"])) ? $_GET["term"] : exit("you must enter a search term");
 
@@ -45,10 +46,17 @@
 
 		<div class="main-result-section">
 			<?php 
-				$resultsProvider = new SiteResultsProvider($connection);
+				
+				if($type == "sites"){
+					$resultsProvider = new SiteResultsProvider($connection);
+					$pageItems = 20;
+			  	 }
+				else{
+					$resultsProvider = new ImageResultsProvider($connection);
+					$pageItems = 20;
+			  	 }	
+
 				$totalResults = $resultsProvider->getNumResults($term);
-				$pageItems = 20;
-			
 				echo "<p class='results-count'>$totalResults results found.</p>";
 
 				echo $resultsProvider->getResultsHtml($page, $pageItems, $term);
