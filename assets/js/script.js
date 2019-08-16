@@ -21,7 +21,7 @@ $(document).ready(function(){
 	});
 });
 
-function loadImage(src){
+function loadImage(src, className){
 	var image = $("<img>");
 	image.on("load", function(){
 
