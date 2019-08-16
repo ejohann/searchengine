@@ -70,6 +70,10 @@
 						$currentPage = 1;
 			    	  }
 
+			    	if($currentPage + $pagesLeft > $numPages + 1){
+			    		$currentPage = $numPages - $pagesLeft;
+			    	}  
+
 					while($pagesLeft != 0 && $currentPage <= $numPages){
 						if($currentPage == $page){
 							echo "<div class='page-number-container'> 
